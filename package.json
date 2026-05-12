@@ -1,0 +1,22 @@
+{
+  "name": "enms",
+  "version": "0.0.1",
+  "description": "Eschricht's Nuxt Monorepo Starter",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:",
+    "@enms/eslint-config": "workspace:*",
+    "@vitest/ui": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

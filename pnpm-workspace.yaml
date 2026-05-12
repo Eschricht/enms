@@ -1,0 +1,42 @@
+shamefullyHoist: true
+shellEmulator: true
+strictPeerDependencies: false
+autoInstallPeers: false
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - semver@6.3.1
+
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'layers/*'
+
+catalog:
+  '@antfu/eslint-config': ^9.0.0
+  '@nuxt/eslint': latest
+  '@types/node': ^24.12.2
+  defu: ^6.1.7
+  eslint: ^10.3.0
+  eslint-plugin-format: ^2.0.1
+  jiti: ^2.7.0
+  nuxt: ^4.4.4
+  tsdown: ^0.22.0
+  typescript: ^6.0.3
+  '@vitest/coverage-v8': ^4.1.6
+  vitest: ^4.1.6
+  vue: latest
+  vue-tsc: ^3.2.8
+  '@nuxt/ui': ^4.0.0
+  tailwindcss: ^4.0.0
+  '@vitest/ui': ^4.1.6
+  '@nuxt/test-utils': ^4.0.3
+  '@vue/test-utils': ^2.4.10
+  happy-dom: ^20.9.0
+  playwright-core: ^1.60.0
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  unrs-resolver: true
+  vue-demi: true

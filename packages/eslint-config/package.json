@@ -1,0 +1,42 @@
+{
+  "name": "@enms/eslint-config",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Eschricht's Nuxt Monorepo Starter - ESLint Configuration",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "prepublishOnly": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "peerDependencies": {
+    "@antfu/eslint-config": "^9.0.0",
+    "eslint": "^10.0.0",
+    "eslint-plugin-format": "^2.0.0"
+  },
+  "dependencies": {
+    "defu": "catalog:"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "jiti": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

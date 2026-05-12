@@ -1,0 +1,30 @@
+# Node dependencies
+node_modules
+
+# logs
+logs
+*.log
+
+# Nuxt dev/build outputs
+.nuxt
+.output
+.nitro
+.data
+.cache
+dist
+
+# Misc
+.DS_Store
+
+# Test
+coverage
+.vitest
+.nyc_output
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Local History
+.history
