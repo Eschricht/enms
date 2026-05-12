@@ -1,73 +1,75 @@
-# Nuxt Layer Starter
+# @enms/layer-a
 
-Create Nuxt extendable layer with this GitHub template.
+Reusable [Nuxt layer](https://nuxt.com/docs/getting-started/layers) providing components and typed app config. Part of the `enms` monorepo, consumed by [`@enms/demo`](../apps/demo) via Nuxt's `extends` mechanism.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- **Reusable Components** — `HelloWorld` component that renders app config values
+- **Typed App Config** — Declares the `myLayer.name` config key with TypeScript module augmentation, giving consumers full type safety when overriding
+- **Isolated Playground** — `.playground/` directory for developing the layer in isolation
+
+## Development
+
+The `.playground/` directory is a miniature Nuxt app that `extends` this layer, letting you develop and test it without a consumer application.
 
 ```bash
-pnpm install
+pnpm dev
+# Starts playground at http://localhost:3000
 ```
 
-## Working on your layer
+All Nuxt commands target the playground:
 
-Your layer is at the root of this repository, it is exactly like a regular Nuxt project, except you can publish it on NPM.
+```bash
+pnpm dev          # Development server
+pnpm build        # Production build
+pnpm generate     # Static generation
+pnpm typecheck    # Type checking
+pnpm test         # Run tests
+```
 
-The `.playground` directory should help you on trying your layer during development.
+## Consumption
 
-Running `pnpm dev` will prepare and boot `.playground` directory, which imports your layer itself.
+Apps consume this layer via `extends` in their `nuxt.config.ts`:
 
-## Distributing your layer
+```ts
+// apps/demo/nuxt.config.ts
+export default defineNuxtConfig({
+  extends: ['@enms/layer-a'],
+})
+```
 
-Your Nuxt layer is shaped exactly the same as any other Nuxt project, except you can publish it on NPM.
+### Overriding App Config
 
-To do so, you only have to check if `files` in `package.json` are valid, then run:
+The layer declares typed app config that consumers can override:
+
+```ts
+// In the consumer's app.config.ts
+export default defineAppConfig({
+  myLayer: {
+    name: 'Custom name', // Fully typed — no guessing
+  },
+})
+```
+
+## Publishing
+
+This layer can be published to npm like any other package:
 
 ```bash
 npm publish --access public
 ```
 
-Once done, your users will only have to run:
+Users then install and extend it:
 
 ```bash
-npm install --save your-layer
+npm install @enms/layer-a
 ```
 
-Then add the dependency to their `extends` in `nuxt.config`:
-
 ```ts
-defineNuxtConfig({
-  extends: 'your-layer'
+// nuxt.config.ts
+export default defineNuxtConfig({
+  extends: ['@enms/layer-a'],
 })
 ```
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-pnpm dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-pnpm build
-```
-
-Or statically generate it with:
-
-```bash
-pnpm generate
-```
-
-Locally preview production build:
-
-```bash
-pnpm preview
-```
-
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check that the `files` field in `package.json` includes all necessary directories before publishing.

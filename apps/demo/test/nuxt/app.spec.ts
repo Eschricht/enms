@@ -1,8 +1,8 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { describe, expect, it } from 'vitest'
 import { DemoHero } from '#components'
-import App from '../../app/app.vue'
-import IndexPage from '../../app/pages/index.vue'
+import App from '~/app.vue'
+import IndexPage from '~/pages/index.vue'
 
 describe('app.vue', () => {
   it('mounts and renders the page content', async () => {

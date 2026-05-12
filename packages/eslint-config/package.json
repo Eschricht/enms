@@ -2,19 +2,17 @@
   "name": "@enms/eslint-config",
   "type": "module",
   "version": "0.0.1",
-  "description": "Eschricht's Nuxt Monorepo Starter - ESLint Configuration",
+  "description": "Shared ESLint flat config wrapping @antfu/eslint-config with pnpm and formatter defaults",
+  "author": "Johannes Eschricht",
+  "license": "MIT",
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": "./src/index.ts",
     "./package.json": "./package.json"
   },
-  "types": "dist/index.d.mts",
-  "files": [
-    "dist"
-  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
-    "prepublishOnly": "pnpm run build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest --watch",
@@ -35,7 +33,6 @@
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
     "jiti": "catalog:",
-    "tsdown": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   }

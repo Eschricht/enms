@@ -14,6 +14,10 @@ packages:
 
 catalog:
   '@antfu/eslint-config': ^9.0.0
+  '@commitlint/cli': ^21.0.0
+  '@commitlint/config-conventional': ^21.0.0
+  '@commitlint/format': ^21.0.0
+  '@commitlint/types': ^21.0.0
   '@nuxt/eslint': latest
   '@nuxt/test-utils': ^4.0.3
   '@nuxt/ui': ^4.0.0
@@ -32,7 +36,6 @@ catalog:
   playwright-core: ^1.60.0
   simple-git-hooks: ^2.13.1
   tailwindcss: ^4.0.0
-  tsdown: ^0.22.0
   typescript: ^6.0.3
   vitest: ^4.1.6
   vue: latest

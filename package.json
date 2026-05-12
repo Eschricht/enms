@@ -1,28 +1,44 @@
 {
   "name": "enms",
   "version": "0.0.1",
-  "description": "Eschricht's Nuxt Monorepo Starter",
+  "private": true,
+  "packageManager": "pnpm@11.1.1+sha512.d1fdf5f73c617b64fa1a56a81c3c8dfe0e966e33a6010aa256b517ae77be21d93e05affc0de1a83b0e4f29d569f68b446ae8f068cd7247c0bb3df0fb4d7bdf9a",
+  "description": "A pnpm monorepo starter for building Nuxt applications composed of reusable layers, shared packages, and typed app config",
+  "author": "Johannes Eschricht",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
   "scripts": {
+    "postinstall": "pnpm -r --if-present run dev:prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "typecheck": "pnpm -r --if-present run typecheck"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/format": "catalog:",
+    "@commitlint/types": "catalog:",
     "@enms/eslint-config": "workspace:*",
     "@vitest/ui": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
+    "jiti": "catalog:",
     "lint-staged": "catalog:",
     "simple-git-hooks": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx --no -- commitlint --edit $1"
   },
   "lint-staged": {
     "*": "eslint --fix"

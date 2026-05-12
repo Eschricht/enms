@@ -2,7 +2,13 @@
   "name": "@enms/layer-a",
   "type": "module",
   "version": "0.0.1",
+  "description": "Reusable Nuxt layer providing components and typed app config augmentation",
+  "author": "Johannes Eschricht",
+  "license": "MIT",
   "main": "./nuxt.config.ts",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "nuxi dev .playground",
     "dev:prepare": "nuxt prepare .playground",

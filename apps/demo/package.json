@@ -2,6 +2,12 @@
   "name": "@enms/demo",
   "type": "module",
   "version": "0.0.1",
+  "description": "Demo Nuxt app showcasing layer consumption, Nuxt UI, and Tailwind CSS",
+  "author": "Johannes Eschricht",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "nuxi dev",
     "dev:prepare": "nuxt prepare",
