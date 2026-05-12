@@ -16,7 +16,15 @@
     "@vitest/ui": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-format": "catalog:",
+    "lint-staged": "catalog:",
+    "simple-git-hooks": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
