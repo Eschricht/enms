@@ -1,6 +1,9 @@
 # enms
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/Eschricht/enms/actions/workflows/ci.yml/badge.svg)](https://github.com/Eschricht/enms/actions/workflows/ci.yml)
+[![Nuxt](https://img.shields.io/badge/Nuxt-4.x-00DC82?logo=nuxt.js)](https://nuxt.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript)](https://www.typescriptlang.org/)
 
 Eschricht's Nuxt Monorepo Starter — a scaffold for building [Nuxt](https://nuxt.com) applications composed of reusable layers and shared packages.
 
