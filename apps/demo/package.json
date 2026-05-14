@@ -35,7 +35,6 @@
     "eslint": "catalog:",
     "happy-dom": "catalog:",
     "nuxt": "catalog:",
-    "playwright-core": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:",
