@@ -13,31 +13,30 @@ packages:
   - 'layers/*'
 
 catalog:
-  '@antfu/eslint-config': ^9.0.0
-  '@commitlint/cli': ^21.0.0
-  '@commitlint/config-conventional': ^21.0.0
-  '@commitlint/format': ^21.0.0
-  '@commitlint/types': ^21.0.0
+  '@antfu/eslint-config': ^9.2.0
+  '@commitlint/cli': ^21.2.1
+  '@commitlint/config-conventional': ^21.2.0
+  '@commitlint/format': ^21.2.0
+  '@commitlint/types': ^21.2.0
   '@nuxt/eslint': latest
   '@nuxt/test-utils': ^4.0.3
-  '@nuxt/ui': ^4.0.0
+  '@nuxt/ui': ^4.9.0
   '@types/node': ^24.12.2
   '@vitest/coverage-v8': ^4.1.6
-  '@vitest/ui': ^4.1.6
+  '@vitest/ui': ^4.1.10
   '@vue/test-utils': ^2.4.10
   defu: ^6.1.7
-  eslint: ^10.3.0
+  eslint: ^10.7.0
   eslint-plugin-format: ^2.0.1
   happy-dom: ^20.9.0
   jiti: ^2.7.0
-  lint-staged: ^17.0.4
-
-  nuxt: ^4.4.4
+  lint-staged: ^17.2.0
+  nuxt: ^4.5.0
   playwright-core: ^1.60.0
   simple-git-hooks: ^2.13.1
   tailwindcss: ^4.0.0
-  typescript: ^6.0.3
-  vitest: ^4.1.6
+  typescript: ^7.0.2
+  vitest: ^4.1.10
   vue: latest
   vue-tsc: ^3.2.8
 allowBuilds:
